@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift(__dir__ + '/../lib') unless $LOAD_PATH.include?(__dir__ + '/../lib')
+
+require 'rubygems'
+require 'top-n'
+
+if ARGV.empty? or ARGV.size > 2
+  puts "Usage: ./top_n FILE_PATH NUMBER"
+  exit 1
+end
+
+path = ARGV[0]
+max_size = ARGV[1].to_i
+
+# building min heap from input file and organizing results
+min_heap = TopN.read_nums_from_file(path, max_size)
+result = TopN.print_heap(min_heap)
+
+# print result 
+puts result.join(" ")
+
+exit 0

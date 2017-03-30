@@ -23,9 +23,10 @@ module TopN
 
              # take minimun element in the heap (the root element)
              minimun = min_heap.peek
-                
+             
+             # let's not forget the min_heap will contain 'nil' as starting element, so we should decrement it's size by 1
              if minimun.nil? or num > minimun or ((min_heap.size - 1) < max_size) then
-                # let's not forget the min_heap will contain 'nil' as starting element, so we should decrement it's size by 1
+                # pop from ths heap if it is already full
                 min_heap.pop if (min_heap.size - 1) == max_size
 
                 # insert element in the heap 

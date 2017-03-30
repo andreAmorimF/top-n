@@ -3,7 +3,7 @@
 ## Requirements:
 
 - Ruby >= 2.2.1
-- Rake
+- Rake >= 10.4.2
 
 You might need to install the gem _test-unit_ in order to run the unit tests:
 ```
@@ -16,7 +16,7 @@ In order to run the top-n, from the root dir of this project, type:
 ```
 ./bin/top-n FILE_PATH NUMBER
 ```
-where:
+Where:
 * FILE_PATH is the path of the input file
 * NUMBER corresponds to the 'N' from the top-n computation 
 
